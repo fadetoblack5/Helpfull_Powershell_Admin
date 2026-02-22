@@ -4,8 +4,8 @@ THIS SCRIPT IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING
 NEVER USE an untested script in Production without testing it in NON-Prod first!
 .NOTES
     Author: Michael Russ
-    Version: 1.0
-    Date: 2026-02-21
+    Version: 1.1
+    Date Uploaded 2026-02-21
 	#>
 <#
 .SYNOPSIS
@@ -65,3 +65,4 @@ catch {
     exit 1
 
 }
+
