@@ -16,7 +16,10 @@ NEVER USE an untested script in Production without testing it in NON-Prod first!
     If free space is below required threshold, logs:
     "Error Not enough space on C:"
     and exits with code 1.
-#>
+	#>
+<# Run the Powershell script and the installer in the same source directory
+ Add this line to run unsigned scripts In Task Sequence or Packages Command Line powershell.exe -executionpolicy Bypass -file ".\SCCM Disk Space Pre-Check.ps1"
+	#>
 
 [CmdletBinding()]
 param(
@@ -60,4 +63,5 @@ catch {
     $ErrorMessage = "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') - Error $($_.Exception.Message)"
     Add-Content -Path $LogPath -Value $ErrorMessage
     exit 1
+
 }
